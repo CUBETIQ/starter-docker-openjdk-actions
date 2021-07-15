@@ -1,0 +1,35 @@
+name: 'Starter Docker OpenJDK'
+description: 'Starter Docker OpenJDK GitHub Action for CUBETIQ with docker and openjdk environment.'
+inputs:
+  image:
+    description: 'Docker image name'
+    required: true
+  options:
+    description: 'Docker options'
+    required: false
+  run:
+    description: 'Run commands inside container'
+    required: false
+  shell:
+    description: 'Use a specific shell for run commands'
+    required: false
+    default: sh
+  registry:
+    description: 'Docker registry endpoint'
+    required: false
+  username:
+    description: 'Docker registry username'
+    required: false
+  password:
+    description: 'Docker registry password'
+    required: false
+  docker_network:
+    description: 'Docker network'
+    default: ${{ job.container.network }}
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  color: 'yellow'
+  icon: 'box'

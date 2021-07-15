@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+        
+      - 
+        name: Starter Docker OpenJDK Test
+        uses: cubetiq/starter-docker-openjdk-actions@main
+        with:
+          run: echo Docker":" $(docker version); echo Java":" $(java -version); echo Java Compiler":" $(javac -version)
