@@ -17,4 +17,4 @@ jobs:
         name: Starter Docker OpenJDK Test
         uses: cubetiq/starter-docker-openjdk-actions@main
         with:
-          run: echo Docker":" $(docker version); echo Java":" $(java -version); echo Java Compiler":" $(javac -version)
+          run: echo Docker":" $(docker version); echo Java":" $(java -version); echo Java Compiler":" $(javac -version); echo Git":" $(git --version)
