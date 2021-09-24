@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, ubutun ]
 
 jobs:
   build:
@@ -15,6 +15,6 @@ jobs:
         
       - 
         name: Starter Docker OpenJDK Test
-        uses: cubetiq/starter-docker-openjdk-actions@main
+        uses: cubetiq/starter-docker-openjdk-actions@ubuntu
         with:
           run: echo Docker":" $(docker version); echo Java":" $(java -version); echo Java Compiler":" $(javac -version); echo Git":" $(git --version)

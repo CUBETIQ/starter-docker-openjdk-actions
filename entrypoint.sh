@@ -19,7 +19,7 @@ then INPUT_SHELL=sh
 fi
 
 if [ -z $INPUT_IMAGE ];
-then INPUT_IMAGE=cubetiq/calpine-docker-openjdk:latest
+then INPUT_IMAGE=cubetiq/openjdk:11u-ubuntu
 fi
 
 if [ -z $semicolon_delimited_script ];
